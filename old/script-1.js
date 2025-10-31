@@ -1,14 +1,20 @@
-// year stamp
+// Year stamp
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('year').textContent = new Date().getFullYear();
 });
 
-// (optional) mobile menu toggle if you want to make it functional later
-// const toggle = document.querySelector('.menu-toggle');
-// const menu = document.querySelector('.menu');
-// toggle?.addEventListener('click', () => {
-//   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-// });
+// Dark mode toggle (remembers preference)
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const saved = localStorage.getItem('theme');
+if (saved) root.setAttribute('data-theme', saved);
+
+themeToggle?.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
 // ---- Projects data (edit this) ----
 const projects = [
   
