@@ -14,7 +14,7 @@ const projects = [
   
   {
     title: "Tetrix (Java)",
-    stack: ["JavaFX","JSON"],
+    stack: ["Java","JavaFX","JSON"],
     summary: "Tetris with JSON config, persistent high scores, and AI heuristics.",
     bullets: [
       "game field for 1 or 2 players",
@@ -26,7 +26,26 @@ const projects = [
       {label: "Video", url: "https://www.youtube.com/watch?v=MUCsAu3I0Wc"},
       {label: "GitHub", url: "https://github.com/shengguagua/tetris-game"}
     ]
+  },
+  {
+    title: "Brick Measure Environment",
+    stack: ["HTML","CSS","Javascript","C++", "JSON", "Sensor hardware"],
+    summary: "An IoT-based environment-monitoring brick using NodeMCU and sensors measures temperature, humidity, and vibrations, sending real-time alerts via LINE Notify to enhance home safety.",
+    bullets: [
+      "Created an environment-monitoring brick prototype.",
+      "Measures temperature, humidity, and vibrations around the house.",
+      "Uses NodeMCU with environmental sensors.",
+      "Displays data on a web page.",
+      "Sends alerts via LINE Notify."      
+    ],
+    links: [
+      {label: "Video", url: "https://www.youtube.com/watch?v=jNG6OQ4r49c"},
+      {label: "My drive", url: "https://drive.google.com/file/d/1M4_h2tAjXJHLGUy6-lqd8iCfEp6GnO2x/view?usp=sharing"}
+    ]
   }
+
+
+
 ];
 
 // ---- Render project cards ----
