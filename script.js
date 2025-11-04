@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // (optional) mobile menu toggle if you want to make it functional later
-// const toggle = document.querySelector('.menu-toggle');
-// const menu = document.querySelector('.menu');
-// toggle?.addEventListener('click', () => {
-//   menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-// });
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+toggle?.addEventListener('click', () => {
+ menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+ });
 // ---- Projects data (edit this) ----
 const projects = [
   
