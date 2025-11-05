@@ -42,6 +42,22 @@ const projects = [
       {label: "Video", url: "https://www.youtube.com/watch?v=jNG6OQ4r49c"},
       {label: "My drive", url: "https://drive.google.com/file/d/1M4_h2tAjXJHLGUy6-lqd8iCfEp6GnO2x/view?usp=sharing"}
     ]
+  },
+  {
+    title: "Event booking website (Prototype)",
+    stack: ["PHP","Laravel","CSS"],
+    summary: "The website is a Laravel-based event management system that supports two user roles — Organisers and Attendees",
+    bullets: [
+      "Home page shows paginated upcoming events",
+      "MEvent management (CRUD) with validation and booking restrictions",
+      "Booking system prevents duplicates and full-capacity bookings",
+      "Event Waiting List: join full events and get notified when spots open"
+  
+    ],
+    links: [
+      
+      {label: "GitHub", url: "https://github.com/Preaw-warinphorn/event-booking"}
+    ]
   }
 
 
