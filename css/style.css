@@ -645,6 +645,66 @@ body {
 .text-orange { color: var(--orange); }
 .text-muted { color: var(--muted); }
 
+/* ── HAMBURGER BUTTON ── */
+.nav-mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px;
+  z-index: 200;
+}
+.nav-mobile-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+
+/* ── FULL-SCREEN MOBILE MENU ── */
+.nav-mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 180;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.nav-mobile-menu.open { display: flex; }
+.nav-mobile-menu a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(36px, 10vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 24px;
+  transition: color 0.2s;
+}
+.nav-mobile-menu a:hover,
+.nav-mobile-menu a.active { color: var(--orange); }
+.nav-mobile-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: var(--text);
+  line-height: 1;
+  padding: 4px 8px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero-name { font-size: 72px; }
@@ -657,16 +717,37 @@ body {
   .container { padding: 0 20px; }
   .nav { padding: 16px 20px; }
   .nav-links { display: none; }
-  .hero-name { font-size: 52px; }
-  .hero-bottom { grid-template-columns: 1fr; gap: 24px; }
-  .work-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .skill-item { border-right: none !important; }
+  .btn-talk { display: none; }
+  .nav-mobile-toggle { display: flex; }
+
+  /* Typography */
+  .hero-name    { font-size: 52px; }
+  .about-title  { font-size: 44px; }
+  .exp-title-v2 { font-size: 44px; }
+  .work-title-v2 { font-size: 48px; }
+  .exp-role     { font-size: 20px; }
+  .project-name { font-size: 22px; }
+  .footer-tagline { font-size: 26px; }
+
+  /* Spacing */
+  .section      { padding: 48px 0; }
+  .about-hero   { padding: 36px 0; }
+  .skills-section { padding: 0 0 48px; }
+  .footer       { padding: 48px 0 24px; }
+  .index-hero   { padding: 32px 0 48px; }
+
+  /* Layouts */
+  .hero-bottom        { grid-template-columns: 1fr; gap: 24px; }
+  .work-grid          { grid-template-columns: 1fr; }
+  .work-card--featured { min-height: 280px; }
+  .skills-grid        { grid-template-columns: 1fr; }
+  .skill-item         { border-right: none !important; }
   .skill-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--border); }
   .skill-item:last-child { border-bottom: none; }
-  .footer-main { grid-template-columns: 1fr; }
-  .toolkit-grid { grid-template-columns: 1fr; }
+  .footer-main        { grid-template-columns: 1fr; }
+  .toolkit-grid       { grid-template-columns: 1fr; }
   .toolkit-skill:nth-child(even) { border-left: none; padding-left: 0; }
+  .exp-card-v2        { padding: 24px 20px; }
 }
 
 /* ════════════════════════════════════════
@@ -686,10 +767,9 @@ body {
 
 .contact-layout-v2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 640px);
   gap: 56px;
   padding-bottom: 80px;
-  align-items: start;
 }
 
 .contact-rows { }
