@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Warinphorn Trakunsombud – Portfolio</title>
+  <meta name="description" content="Developer portfolio: projects, skills, and contact." />
+  <meta property="og:title" content="Your Name – Portfolio" />
+  <meta property="og:description" content="Selected projects, skills, and contact." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ctext y='1em' font-size='96'%3E🚀%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="container site-header">
+    <nav class="nav">
+      <a class="brand" href="#">Warinphorn Trakunsombud</a>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">🌓</button>
+    </nav>
+    <section class="hero">
+      <h1>Hi, I’m <span class="accent">Warinphorn Trakunsombud</span>.</h1>
+      <p class="lede">I build fast, accessible web apps and love clean, readable code.</p>
+      <div class="cta">
+        <a class="btn" href="#projects">See Projects</a>
+        <a class="btn outline" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </section>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div id="projectsGrid" class="grid"></div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <ul class="tags" role="list" aria-label="Skills list">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        <li>SQL</li><li>Java</li><li>Python</li><li>COBOL</li><li>JCL</li>
+        
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>
+        I’m a developer focused on UX, performance, and security. I enjoy turning
+        complex problems into simple, beautiful interfaces.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>
+        <a class="link" href="mailto:warinphorn.trakunsombud@outlook.com">warinphorn.trakunsombud@outlook.com</a> ·
+        <a class="link" href="https://github.com/Preaw-warinphorn" target="_blank" rel="noopener">GitHub</a> ·
+        <a class="link" href="https://www.linkedin.com/in/warinphorn-trakunsombud-26057b163/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+      <!-- Simple email form (mailto). For real forms, use a backend or Netlify Forms later. -->
+      <form class="contact" action="mailto:warinphorn.trakunsombud@outlook.com" method="POST" enctype="text/plain">
+        <label>
+          <span>Name</span>
+          <input name="name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>© <span id="year"></span> Warinphorn T.</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
